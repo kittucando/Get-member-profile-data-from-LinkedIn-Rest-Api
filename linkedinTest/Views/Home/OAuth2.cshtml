@@ -1,0 +1,97 @@
+﻿@*@model Sparkle.LinkedInNET.Profiles.Person*@
+@model linkedinTest.Models.LinkedInProfile
+@{
+    ViewBag.Title = "OAuth2";
+}
+
+<h2>OAuth2</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                First Name   @*@Html.DisplayNameFor(model => model.Firstname)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Firstname)
+            </dd>
+            <dt>
+                Last Name @*@Html.DisplayNameFor(model => model.Lastname)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Lastname)
+            </dd>
+
+            <dt>
+                Maiden Name  @*@Html.DisplayNameFor(model => model.MaidenName)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MaidenName)
+            </dd>
+            <dt>
+                Email Address  @*@Html.DisplayNameFor(model => model.EmailAddress)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+
+            <dt>
+                Position Title      @*@Html.DisplayNameFor(model => model.PositionTitle)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PositionTitle)
+
+            </dd>
+            <dt>
+                Professional Summary  @*@Html.DisplayNameFor(model => model.MaidenName)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
+            <dt>
+                Picture Url  @*@Html.DisplayNameFor(model => model.PictureUrl)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PictureUrl)
+
+            </dd>
+            <dt>
+                Profile Pic:
+            </dt>
+            <dd>
+                <img src="@Model.PictureUrl" />
+            </dd>
+            <dt>
+                Public Profile Url   @*@Html.DisplayNameFor(model => model.PublicProfileUrl)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PublicProfileUrl)
+            </dd>
+            <dt>
+                Phone Number  @*@Html.DisplayNameFor(model => model.PhoneNumber)*@
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+
+
+        </dl>
+    }
+    else
+    {
+        <div style="text-align:center;">
+                       No profile data or something went wrong. Please try again!
+        </div>
+    }
+
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
